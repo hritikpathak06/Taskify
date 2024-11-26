@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+
+.title {
+  font-size: 30px;
+  color: black;
+  font-weight: bolder;
+}
+
+.modal {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 100%;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub_modal {
+  color: black;
+  min-height: 50%;
+  height: max-content;
+  padding: 20px;
+  width: 50%;
+  background-color: white;
+}
+
+.modal_button {
+  color: gray;
+}
+
+.modal_button:hover {
+  color: black;
+}
+
+.modal_header {
+  /* flex justify-between items-center border-b pb-3 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
+}
+
+.children {
+  margin-top: 20px;
+}
+
+.btn {
+  width: 50%;
+  /* margin-left: 50% !important */
+  margin: auto !important;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.column {
+  width: 45%;
+  padding: 10px;
+  border: 2px solid sandybrown;
+  min-height: 250px;
+  height: max-content !important;
+}
+
+.item{
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  .sub_modal {
+    width: 90% !important;
+    height: max-content !important;
+  }
+
+  .btn {
+    width: 100% !important;
+  }
+}
