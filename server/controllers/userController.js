@@ -101,10 +101,11 @@ exports.getMyProfile = async (req, res) => {
 exports.logoutUser = async (req, res) => {
   try {
     res.cookie("token", null, {
+      expires: new Date(0),
       httpOnly: true,
-      sameSite: "strict",
-      maxAge: new Date(0),
-    });
+      secure: true,
+      sameSite: "none",
+    })
     return res.status(201).json({
       success: true,
       msg: "Logged out successfully",
