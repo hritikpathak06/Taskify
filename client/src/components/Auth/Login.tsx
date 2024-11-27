@@ -7,8 +7,8 @@ import { setUser } from "../../redux/slices/authSlice";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ handleShow }: any) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("ritik@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
